@@ -17,20 +17,20 @@ Level::~Level()
 // handle user input
 void Level::handleInput(float dt)
 {
-
+	BallMan.handleInput(dt, input);
 }
 
 // Update game objects
 void Level::update(float dt)
 {
-	
+	BallMan.update(dt, window->getSize());
 }
 
 // Render level
 void Level::render()
 {
 	beginDraw();
-
+	BallMan.render(window);
 	endDraw();
 }
 
